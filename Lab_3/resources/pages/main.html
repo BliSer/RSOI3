@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <style type="text/css">
+ 
+            body {font-family:Arial, Sans-Serif;}
+ 
+            #container {width:470px; margin:0 auto;}
+
+            /* Nicely lines up the labels. */
+            form label {display:inline-block; width:80px;}
+ 
+            /* You could add a class to all the input boxes instead, if you like. That would be safer, and more backwards-compatible */
+            form input[type="text"],
+            form input[type="password"],
+            form input[type="email"] {width:170px;}
+ 
+            form .line {clear:both;}
+            form .line.submit {text-align:right;}
+        </style>
+    </head>
+   <body>
+        <div id="container">
+			<div>
+				<h1>Авторизация</h1>
+				<div><a href="http://localhost:8080/register" tite="Registration">http://localhost/register</a></div>
+				<div><a href="http://localhost:8080/login" tite="Login">http://localhost/login</a></div>
+				<div><a href="http://localhost:8080/logout" tite="Logout">http://localhost/logout</a></div>
+				<h1>Управление данными</h1>
+				<p>Доступ только с авторизацией.</p>
+				<div><a href="http://localhost:8080/clientscontrol" tite="Clients control">http://localhost/clientscontrol</a></div>
+				<div><a href="http://localhost:8080/photoscontrol" tite="Photos control">http://localhost/photoscontrol</a></div
+			</div>
+			<form action ="/clients" method="GET">
+                <h1>Запрос к Clients backend</h1>
+				<p>Без авторизации доступно только получение списка имён пользователей без детальной информации.</p>
+                <div class="line"> <label for="name">	Name 	: </label>	<input type="text" name="name" /></div>
+                <div class="line"> <label for="address">Address : </label>    <input type="text" name="address" /></div>
+                <div class="line"> <label for="email"> 	Email 	: </label>    <input type="text" name="email" /></div>
+				<div class="line submit">                                     	<input type="submit" value="Submit" /></div>
+            </form>
+			<form action ="/photos" method="GET">
+                <h1>Запрос к Photos backend</h1>
+				<p>Без авторизации доступно только получение списка фотографий без детальной информации.</p>
+                <div class="line"> <label for="owner">	Owner : </label>       <input type="text" name="owner" /></div>
+                <div class="line"> <label for="type"> 	Type :  </label>       <input type="text" name="type" /></div>
+				<div class="line submit">                                     	<input type="submit" value="Submit" /></div>
+            </form>
+			<form action ="/photos_of_users" method="GET">
+                <h1>Запрос с агрегированием</h1>
+				<p>Доступ только с авторизацией.</p>
+				<div class="line submit"><input type="submit" value="Submit" /></div>
+            </form>
+        </div>
+    </body>
+</html>

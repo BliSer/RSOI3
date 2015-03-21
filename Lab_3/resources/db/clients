@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfClient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Client>
+    <id>1</id>
+    <name>Bli</name>
+    <address>Moskwa</address>
+    <email>1%402.3</email>
+  </Client>
+  <Client>
+    <id>2</id>
+    <name>Andrey</name>
+    <address>Tver</address>
+    <email>an%40drey.com</email>
+  </Client>
+  <Client>
+    <id>3</id>
+    <name>Anna</name>
+    <address>Orel</address>
+    <email>anna%40mail.ua</email>
+  </Client>
+  <Client>
+    <id>4</id>
+    <name>Katya</name>
+    <address>Moskwa</address>
+    <email>derp%40derp.derp</email>
+  </Client>
+</ArrayOfClient>
