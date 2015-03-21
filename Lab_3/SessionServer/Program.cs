@@ -37,14 +37,13 @@ all params are substrings to be searched";
         }
 
         static string IssueCookie(string username, double timeToLive = CookieLifeMS)
-        {   activeCookies.Remove(username);
-            cookieTimers.Remove(username);
-            //activeCookies.Add(username);
-            //cookieTimers.Add(username);
-
+        {   //activeCookies.Remove(username);
+            //cookieTimers.Remove(username);
+            
             string cookie = GenerateRandomString();
-            activeCookies[username] = cookie;
-
+            //activeCookies[username] = cookie;
+            activeCookies.Add(username, cookie);
+            
             Timer t = new Timer();
             t.AutoReset = false;
             t.Elapsed += (sender, e) =>
@@ -53,7 +52,8 @@ all params are substrings to be searched";
                     t.Dispose();
                 };
             t.Interval = timeToLive;
-            cookieTimers[username] = t;
+            //cookieTimers[username] = t;
+            cookieTimers.Add(username, t);
             t.Start();
 
             return cookie;

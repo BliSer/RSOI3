@@ -32,7 +32,7 @@
 				<div><a href="http://localhost:8080/clientscontrol" tite="Clients control">http://localhost/clientscontrol</a></div>
 				<div><a href="http://localhost:8080/photoscontrol" tite="Photos control">http://localhost/photoscontrol</a></div
 			</div>
-			<form action ="/clients" method="GET">
+			<form action ="http://localhost:8080/clients" method="GET">
                 <h1>Запрос к Clients backend</h1>
 				<p>Без авторизации доступно только получение списка имён пользователей без детальной информации.</p>
                 <div class="line"> <label for="name">	Name 	: </label>	<input type="text" name="name" /></div>
@@ -40,14 +40,14 @@
                 <div class="line"> <label for="email"> 	Email 	: </label>    <input type="text" name="email" /></div>
 				<div class="line submit">                                     	<input type="submit" value="Submit" /></div>
             </form>
-			<form action ="/photos" method="GET">
+			<form action ="http://localhost:8080/photos" method="GET">
                 <h1>Запрос к Photos backend</h1>
-				<p>Без авторизации доступно только получение списка фотографий без детальной информации.</p>
+				<p>Без авторизации доступно только получение дат загрузки фотографий без информации о владельце.</p>
                 <div class="line"> <label for="owner">	Owner : </label>       <input type="text" name="owner" /></div>
-                <div class="line"> <label for="type"> 	Type :  </label>       <input type="text" name="type" /></div>
+                <div class="line"> <label for="uploaded"> 	Uploaded :  </label>       <input type="text" name="uploaded" /></div>
 				<div class="line submit">                                     	<input type="submit" value="Submit" /></div>
             </form>
-			<form action ="/photos_of_users" method="GET">
+			<form action ="http://localhost:8080/photos_of_users" method="GET">
                 <h1>Запрос с агрегированием</h1>
 				<p>Доступ только с авторизацией.</p>
 				<div class="line submit"><input type="submit" value="Submit" /></div>

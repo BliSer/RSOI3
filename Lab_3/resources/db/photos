@@ -30,4 +30,14 @@
     <uploaded>21.02.2015</uploaded>
     <owner>Katya</owner>
   </Photo>
+  <Photo>
+    <id>7</id>
+    <uploaded>01.03.2015</uploaded>
+    <owner>Vitya</owner>
+  </Photo>
+  <Photo>
+    <id>8</id>
+    <uploaded>11.03.2015</uploaded>
+    <owner>Ivan</owner>
+  </Photo>
 </ArrayOfPhoto>

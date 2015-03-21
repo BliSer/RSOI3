@@ -78,7 +78,7 @@ namespace EmployeesServer
                                         var pars = request.GetPOSTParams();
                                         if (pars.Keys.Contains("name") && pars.Keys.Contains("email") && pars.Keys.Contains("address"))
                                         {
-                                            clients.Add(new Client(GetNewID(), pars["name"], pars["email"], pars["address"]));
+                                            clients.Add(new Client(GetNewID(), pars["name"], pars["address"], pars["email"]));
                                             return response.SetStatusWithMessage(HttpStatusCode.Created, "Successfully created");
                                         }
                                         else
@@ -92,7 +92,7 @@ namespace EmployeesServer
                                             if (pars.ContainsKey("email"))
                                                 record.email = pars["email"];
                                             if (pars.ContainsKey("name"))
-                                                record.address = pars["email"];
+                                                record.address = pars["address"];
                                             return JsonConvert.SerializeObject(new { status = "success" });
                                         }
                                         else

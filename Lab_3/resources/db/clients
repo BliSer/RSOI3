@@ -24,4 +24,16 @@
     <address>Moskwa</address>
     <email>derp%40derp.derp</email>
   </Client>
+  <Client>
+    <id>5</id>
+    <name>Vitya</name>
+    <address>Piter</address>
+    <email>zdvitas%2540org.com</email>
+  </Client>
+  <Client>
+    <id>6</id>
+    <name>Ivan</name>
+    <address>Zelenograd</address>
+    <email>4%25405.6</email>
+  </Client>
 </ArrayOfClient>

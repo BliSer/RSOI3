@@ -4,4 +4,8 @@
     <name>admin</name>
     <password>pwd</password>
   </User>
+  <User>
+    <name>admin2</name>
+    <password>pass</password>
+  </User>
 </ArrayOfUser>
